@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>name_and_url</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>AFCommentsSetupOnChange</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading) {
+        return;
+    }
+
+    var currentComments = g_form.getValue("name_and_comments");
+    if (newValue) {
+        var afNames = Object.keys(JSON.parse(newValue));
+        var newComments = {};
+        if (currentComments) {
+            newComments = JSON.parse(currentComments);
+            var commNames = Object.keys(newComments);
+            if (commNames.length > afNames.length) {
+                var keysToRemove = commNames.filter(function(commName) {
+                    return (afNames.indexOf(commName) < 0);
+                });
+
+                for (var k = 0; k < keysToRemove.length; k++) {
+                    delete newComments[keysToRemove[k]];
+                }
+            } else {
+                var keysToAdd = afNames.filter(function(afName) {
+                    return (commNames.indexOf(afName) < 0);
+                });
+
+                for (var j = 0; j < keysToAdd.length; j++) {
+                    newComments[keysToAdd[j]] = "";
+                }
+            }
+        } else {
+            for (var i = 0; i < afNames.length; i++) {
+                newComments[afNames[i]] = "";
+            }
+        }
+        g_form.setValue("name_and_comments", JSON.stringify(newComments));
+    } else {
+        g_form.clearValue("name_and_comments");
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 14:08:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7e38ec33db390510883c68d35b9619e9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>AFCommentsSetupOnChange</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_script_client_7e38ec33db390510883c68d35b9619e9</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 14:40:05</sys_updated_on>
+        <table>x_350851_content_0_story_comment</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
