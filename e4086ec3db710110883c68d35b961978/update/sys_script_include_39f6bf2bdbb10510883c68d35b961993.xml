@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_350851_content_0.StoryCommentsUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>StoryCommentsUtils</name>
+        <script><![CDATA[var StoryCommentsUtils = Class.create();
+StoryCommentsUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    generateContent: function() {
+        var data = this.getParameter("sysparm_data");
+        var html = "Empty";
+        if (data) {
+            data = JSON.parse(data);
+            var afURLkeys = [];
+            if (data.afNameURL) {
+                afURLkeys = Object.keys(data.afNameURL);
+            }
+
+            html = "<div id='contentBody'><table>";
+
+            //Append Application Files data
+            if (afURLkeys.length > 0) {
+                html += "<tr class='developmentStuff'><th id='developmentHead'>Development</th></tr><tr class='developmentStuff'><th>Application Files</th></tr>";
+                var appendAFs = "";
+                var afComments = "";
+                for (var afCount = 0; afCount < afURLkeys.length; afCount++) {
+                    if (data.afNameComments[afURLkeys[afCount]]) {
+                        afComments = ":&nbsp;&nbsp;&nbsp;" + data.afNameComments[afURLkeys[afCount]];
+                    } else {
+                        afComments = "";
+                    }
+                    appendAFs += "<tr class='developmentStuff'><td><a href='" + data.afNameURL[afURLkeys[afCount]] + "' target='_blank'>" + afURLkeys[afCount] + "</a>" + afComments + "</td></tr>";
+                }
+                if (appendAFs) {
+                    html += appendAFs;
+                }
+            }
+
+            //Append Update Set and Changes data
+            if (data.usName && data.usURL) {
+                html += "<tr><th>Update Set</th></tr><tr><td id='updateSetContent'><a href='" + data.usURL + "' target='_blank'>" + data.usName + "</a></td></tr>";
+            }
+
+            if (data.changeCount && data.changesURL) {
+                html += "<tr><th>Changes To Be Pushed</th></tr><tr><td id='changesLink'><a href='" + data.changesURL + "' target='_blank'>" + data.changeCount + " Changes</a></td></tr>";
+            }
+
+            // Add Test Steps
+            if (data.testingAid) {
+                html += "<tr class='testStuff'><th id='testHead'>Testing</th></tr><tr class='testStuff'><td><ul id='testSteps'>";
+                var testSteps = data.testingAid.split("\n");
+                for (var stepCount = 0; stepCount < testSteps.length; stepCount++) {
+                    html += "<li>" + testSteps[stepCount] + "</li>";
+                }
+                html += "</ul></td></tr>";
+            }
+
+            html += "</table><footer id='footerParent'><hr><p id='footerContent'>No Application files were harmed during the development process of this story. Any changes that are there inthe update set but not in the changes to be pushed might have been done fortesting purposes and reverted. If you still feel there's something wrong with them, please contact me.</p></footer></div><style>#contentBody {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}table {padding: 10px 0px 0px 7px;}table,th,td {text-align: start;}th,td {min-width: 200px;padding-left: 10px;}th {font-size: medium;padding-top: 5px;}td {font-size: small;padding-left: 15px;padding-top: 5px;}.developmentStuff {display: block;}#developmentHead {font-size: x-large;padding: 0px 0px 10px 0px;}.testStuff {display: block;}#testHead {font-size: x-large;padding: 20px 0px 0px 0px;}#testSteps {font-size: small;}#footerParent {padding: 15px 10px 0px 10px;}#footerContent {padding: 0px 10px 0px 10px;font-size: 9px;}</style>";
+        }
+
+        return html;
+    },
+    type: 'StoryCommentsUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 10:31:00</sys_created_on>
+        <sys_id>39f6bf2bdbb10510883c68d35b961993</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>StoryCommentsUtils</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_script_include_39f6bf2bdbb10510883c68d35b961993</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 15:08:57</sys_updated_on>
+    </sys_script_include>
+</record_update>

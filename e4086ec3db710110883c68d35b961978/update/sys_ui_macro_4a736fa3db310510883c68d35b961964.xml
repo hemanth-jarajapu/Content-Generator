@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>StoryCommentsMacro</name>
+        <scoped_name>x_350851_content_0_StoryCommentsMacro</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 09:05:54</sys_created_on>
+        <sys_id>4a736fa3db310510883c68d35b961964</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>StoryCommentsMacro</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_ui_macro_4a736fa3db310510883c68d35b961964</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 15:10:54</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<g:macro_invoke macro="x_350851_content_0_StoryCommentsSubMacro" />
+	<script>
+		function generateComments() {
+			var data = {};
+			data.usName = g_form.getValue("update_set_name");
+			data.usURL = g_form.getValue("update_set_url");
+			data.changeCount = g_form.getValue("number_of_changes");
+			data.changesURL = g_form.getValue("team_dashboard_url");
+			data.testingAid = g_form.getValue("testing_aid");
+			if(g_form.getValue("name_and_comments"))
+				data.afNameComments = JSON.parse(g_form.getValue("name_and_comments"));
+			if(g_form.getValue("name_and_url"))
+				data.afNameURL = JSON.parse(g_form.getValue("name_and_url"));
+			var utils = new GlideAjax("x_350851_content_0.StoryCommentsUtils");
+			utils.addParam("sysparm_name", "generateContent");
+			utils.addParam("sysparm_data", JSON.stringify(data));
+			utils.getXMLAnswer(function(answer){
+				gel("contentHolder").innerHTML = answer;
+				g_form.setValue("story_comments", answer);
+		
+				var copyText = gel("contentHolder");
+				copyText.select();
+				navigator.clipboard.writeText(copyText.innerHTML);
+				g_form.addInfoMessage("Copied the HTML to clipboard.");
+			})
+		}
+	</script>
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>
