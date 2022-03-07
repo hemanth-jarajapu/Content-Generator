@@ -11,7 +11,7 @@
         <name>StoryCommentsSetupOnLoad</name>
         <order/>
         <script><![CDATA[function onLoad() {
-    g_form.showFieldMsg("name_and_url", "The kays in 'Name and Comments' field should be same as those of the 'Name and URL' field", "warning");
+    g_form.showFieldMsg("name_and_url", "The keys in 'Name and Comments' field should be same as those of the 'Name and URL' field", "warning");
     g_form.showFieldMsg("story_comments", "You can copy the HTML here by clicking the 'Source Code(< >)' button. The table borders shown here are just for reference and won't reflect in the copied HTML, but you can edit the content and borders as per your liking.", "info");
 	//g_form.showFieldMsg("testing_aid", "Every new line added here will be a bullet point in the generated content.");
 }]]></script>
@@ -21,7 +21,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4743a03bdbf50510883c68d35b961966</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>StoryCommentsSetupOnLoad</sys_name>
         <sys_overrides/>
         <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
@@ -29,7 +29,7 @@
         <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
         <sys_update_name>sys_script_client_4743a03bdbf50510883c68d35b961966</sys_update_name>
         <sys_updated_by>hemanth.jarajapu</sys_updated_by>
-        <sys_updated_on>2022-02-27 15:00:01</sys_updated_on>
+        <sys_updated_on>2022-03-07 10:19:33</sys_updated_on>
         <table>x_350851_content_0_story_comment</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>false</ignore_cache>
+        <is_private>true</is_private>
+        <name>x_350851_content_0.Hemanth's footer</name>
+        <read_roles/>
+        <suffix>Hemanth's footer</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-03-07 10:45:27</sys_created_on>
+        <sys_id>1df6895edb02c110883c68d35b96193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_350851_content_0.Hemanth's footer</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_properties_1df6895edb02c110883c68d35b96193d</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-03-07 10:45:27</sys_updated_on>
+        <type>string</type>
+        <value>&lt;footer id="footerParent"&gt;&lt;hr /&gt;&#13;
+&lt;p id="footerContent"&gt;No Application files were harmed during the development process of this story. Any changes that are there in the update set but not in the changes to be pushed might have been made for testing purposes and reverted. If you still feel there's something wrong with them, please contact me.&lt;/p&gt;&#13;
+&lt;/footer&gt;</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=1df6895edb02c110883c68d35b96193d"/>
+</record_update>

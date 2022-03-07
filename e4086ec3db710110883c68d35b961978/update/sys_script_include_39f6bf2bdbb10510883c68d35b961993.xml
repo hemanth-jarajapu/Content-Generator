@@ -59,7 +59,7 @@ StoryCommentsUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor
                 html += "</ul></td></tr>";
             }
 
-            html += "</table><footer id='footerParent'><hr><p id='footerContent'>No Application files were harmed during the development process of this story. Any changes that are there inthe update set but not in the changes to be pushed might have been done fortesting purposes and reverted. If you still feel there's something wrong with them, please contact me.</p></footer></div><style>#contentBody {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}table {padding: 10px 0px 0px 7px;}table,th,td {text-align: start;}th,td {min-width: 200px;padding-left: 10px;}th {font-size: medium;padding-top: 5px;}td {font-size: small;padding-left: 15px;padding-top: 5px;}.developmentStuff {display: block;}#developmentHead {font-size: x-large;padding: 0px 0px 10px 0px;}.testStuff {display: block;}#testHead {font-size: x-large;padding: 20px 0px 0px 0px;}#testSteps {font-size: small;}#footerParent {padding: 15px 10px 0px 10px;}#footerContent {padding: 0px 10px 0px 10px;font-size: 9px;}</style>";
+            html += "</table></div><style>#contentBody {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}table {padding: 10px 0px 0px 7px;}table,th,td {text-align: start;}th,td {min-width: 200px;padding-left: 10px;}th {font-size: medium;padding-top: 5px;}td {font-size: small;padding-left: 15px;padding-top: 5px;}.developmentStuff {display: block;}#developmentHead {font-size: x-large;padding: 0px 0px 10px 0px;}.testStuff {display: block;}#testHead {font-size: x-large;padding: 20px 0px 0px 0px;}#testSteps {font-size: small;}#footerParent {padding: 15px 10px 0px 10px;}#footerContent {padding: 0px 10px 0px 10px;font-size: 9px;}</style>";
         }
 
         return html;
@@ -70,13 +70,13 @@ StoryCommentsUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_created_by>hemanth.jarajapu</sys_created_by>
         <sys_created_on>2022-02-27 10:31:00</sys_created_on>
         <sys_id>39f6bf2bdbb10510883c68d35b961993</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>StoryCommentsUtils</sys_name>
         <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
         <sys_update_name>sys_script_include_39f6bf2bdbb10510883c68d35b961993</sys_update_name>
         <sys_updated_by>hemanth.jarajapu</sys_updated_by>
-        <sys_updated_on>2022-02-27 15:08:57</sys_updated_on>
+        <sys_updated_on>2022-03-07 10:34:18</sys_updated_on>
     </sys_script_include>
 </record_update>
