@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Application Files" section_id="4609622fdb79c110883c68d35b961944" sys_domain="global" table="x_350851_content_0_story_comment" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>3235707bdb790510883c68d35b96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <text/>
+            <type display_value="Plain Text">8e7fdb04531300109686ddeeff7b127d</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>f235707bdb790510883c68d35b96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <text>(Click on the Wikitext button to edit. Every new line added will be a bullet point in the generated content)</text>
+            <type display_value="Plain Text">8e7fdb04531300109686ddeeff7b127d</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>3235707bdb790510883c68d35b96194e</element>
+            <position>0</position>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>4335707bdb790510883c68d35b961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Application Files" display_value="Application Files" name="x_350851_content_0_story_comment" sys_domain="global" view="Default view">4609622fdb79c110883c68d35b961944</sys_ui_section>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_and_url</element>
+            <position>1</position>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>c335707bdb790510883c68d35b961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Application Files" display_value="Application Files" name="x_350851_content_0_story_comment" sys_domain="global" view="Default view">4609622fdb79c110883c68d35b961944</sys_ui_section>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name_and_comments</element>
+            <position>2</position>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>4735707bdb790510883c68d35b961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Application Files" display_value="Application Files" name="x_350851_content_0_story_comment" sys_domain="global" view="Default view">4609622fdb79c110883c68d35b961944</sys_ui_section>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>f235707bdb790510883c68d35b96194e</element>
+            <position>3</position>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>c735707bdb790510883c68d35b961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Application Files" display_value="Application Files" name="x_350851_content_0_story_comment" sys_domain="global" view="Default view">4609622fdb79c110883c68d35b961944</sys_ui_section>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>testing_aid</element>
+            <position>4</position>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>4b35707bdb790510883c68d35b961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Application Files" display_value="Application Files" name="x_350851_content_0_story_comment" sys_domain="global" view="Default view">4609622fdb79c110883c68d35b961944</sys_ui_section>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_350851_content_0_StoryCommentsMacro.xml</element>
+            <position>5</position>
+            <sys_created_by>hemanth.jarajapu</sys_created_by>
+            <sys_created_on>2022-02-27 15:02:45</sys_created_on>
+            <sys_id>cb35707bdb790510883c68d35b961953</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Story Comments Formatter">acfaeaefdb79c110883c68d35b9619d0</sys_ui_formatter>
+            <sys_ui_section caption="Application Files" display_value="Application Files" name="x_350851_content_0_story_comment" sys_domain="global" view="Default view">4609622fdb79c110883c68d35b961944</sys_ui_section>
+            <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+            <sys_updated_on>2022-02-27 15:02:45</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Application Files</caption>
+            <header>false</header>
+            <name>x_350851_content_0_story_comment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-27 04:50:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4609622fdb79c110883c68d35b961944</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_350851_content_0_story_comment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+            <sys_update_name>sys_ui_section_4609622fdb79c110883c68d35b961944</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-27 04:50:12</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

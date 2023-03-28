@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>StoryCommentsSubMacro</name>
+        <scoped_name>x_350851_content_0_StoryCommentsSubMacro</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 09:05:13</sys_created_on>
+        <sys_id>de536fa3db310510883c68d35b9619a3</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>StoryCommentsSubMacro</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_ui_macro_de536fa3db310510883c68d35b9619a3</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-03-07 10:37:39</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+    <div id="buttonContainer">
+        <input type="button" id="generateButton" onclick="generateComments()" value="Generate Content" />
+    </div>
+	
+	<div role="alert" style="display:none" id="copyMessage" class="outputmsg outputmsg_info notification notification-info"><span class="outputmsg_text">Copied the HTML to clipboard.</span></div>
+	<div id="contentHolder"></div>
+	<style>
+		#buttonContainer {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		#generateButton {
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			margin-right: 50px;
+			background-color: rgba(255, 255, 255, 0.45);
+			border: 1px solid #cbcbcb;
+			color: #2e2e2e;
+			line-height: 1.42857;
+			min-width: 10em;
+			min-width: auto\9;
+			min-height: 2.25em;
+			min-height: auto\9;
+			font-weight: normal;
+			padding: 6px 9px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 18px;
+		}
+		
+		#generateButton:hover {
+			background-color: #e7e9eb;
+		}
+		
+		.navbar-default {
+			display: none;
+		}
+		
+		.form_action_button_container {
+			display: none;
+		}
+		
+	</style>
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

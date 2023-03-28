@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>Story Comments Macro</name>
+        <scoped_name>x_350851_content_0_Story Comments Macro</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-27 04:58:26</sys_created_on>
+        <sys_id>11da2aefdb79c110883c68d35b96193f</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Story Comments Macro</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_ui_macro_11da2aefdb79c110883c68d35b96193f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-27 05:57:15</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<body>
+		<div id="buttonContainer">
+			<input type="button" id="generateButton" onclick="generateComments()" value="Generate Content"/>
+		</div>
+	</body>
+	
+	<script>
+		function generateComments() {
+			g_form.addInfoMessage(typeof g_form.getValue("name_and_url"));
+		}
+	</script>
+	
+	<style>
+		#buttonContainer {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		#generateButton {
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			margin-right: 50px;
+			background-color: rgba(255, 255, 255, 0.45);
+			border: 1px solid #cbcbcb;
+			color: #2e2e2e;
+			line-height: 1.42857;
+			min-width: 10em;
+			min-width: auto\9;
+			min-height: 2.25em;
+			min-height: auto\9;
+			font-weight: normal;
+			padding: 6px 9px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 18px;
+		}
+		
+		#generateButton:hover {
+			background-color: #e7e9eb;
+		}
+		
+		.navbar-default {
+			display: none
+		}
+		
+		.form_action_button_container {
+			display: none
+		}
+	</style>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Content Generator">e4086ec3db710110883c68d35b961978</application>
+        <file_path/>
+        <instance_id>a638dbdfdb0e770c91232f17d496191f</instance_id>
+        <instance_name>dev88383</instance_name>
+        <name>sys_ui_macro_11da2aefdb79c110883c68d35b96193f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;Story Comments Macro&lt;/name&gt;&lt;scoped_name&gt;x_350851_content_0_Story Comments Macro&lt;/scoped_name&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-02-27 04:58:26&lt;/sys_created_on&gt;&lt;sys_id&gt;11da2aefdb79c110883c68d35b96193f&lt;/sys_id&gt;&lt;sys_mod_count&gt;31&lt;/sys_mod_count&gt;&lt;sys_name&gt;Story Comments Macro&lt;/sys_name&gt;&lt;sys_package display_value="Content Generator" source="x_350851_content_0"&gt;e4086ec3db710110883c68d35b961978&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Content Generator"&gt;e4086ec3db710110883c68d35b961978&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_11da2aefdb79c110883c68d35b96193f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-02-27 05:57:15&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+	&lt;body&gt;
+		&lt;div id="buttonContainer"&gt;
+			&lt;input type="button" id="generateButton" onclick="generateComments()" value="Generate Content"/&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+	
+	&lt;script&gt;
+		function generateComments() {
+			g_form.addInfoMessage(typeof g_form.getValue("name_and_url"));
+		}
+	&lt;/script&gt;
+	
+	&lt;style&gt;
+		#buttonContainer {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		#generateButton {
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			margin-right: 50px;
+			background-color: rgba(255, 255, 255, 0.45);
+			border: 1px solid #cbcbcb;
+			color: #2e2e2e;
+			line-height: 1.42857;
+			min-width: 10em;
+			min-width: auto\9;
+			min-height: 2.25em;
+			min-height: auto\9;
+			font-weight: normal;
+			padding: 6px 9px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 18px;
+		}
+		
+		#generateButton:hover {
+			background-color: #e7e9eb;
+		}
+		
+		.navbar-default {
+			display: none
+		}
+		
+		.form_action_button_container {
+			display: none
+		}
+	&lt;/style&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1484757287</payload_hash>
+        <record_name>Story Comments Macro</record_name>
+        <reverted_from/>
+        <source>f688ee07db710110883c68d35b961921</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-27 05:57:15</sys_created_on>
+        <sys_id>9868fee7dbf9c110883c68d35b9619f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f39c12b760000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-27 05:57:15</sys_updated_on>
+        <type>Macro</type>
+        <update_guid>5068fee7c1f9c11079f8983953e787f1</update_guid>
+        <update_guid_history>5068fee7c1f9c11079f8983953e787f1:1484757287,ee387ee700f9c11080352a8deaf1b32b:-1370738230,30283ee39af9c1107d6e418d133ad92b:1902053104,5f57bee3f5f9c110c5cac49879e0efa4:720565692,6b27b227a6f9c110c99c2a7292cf7c58:1870762458,2dc6726779f9c1102f1949d2a1575c2e:1797638707,7786fa279df9c110cdec64e278f0184f:1256215944,2a56fee310f9c110792458132568f604:226691428,0026b227e0f9c1100098da6bae6a564d:-1109406206,abe53ee359f9c1105d3fd1a115e20823:367323024,78c5f6e3f0f9c110e291c841d3677908:-1922497305,47757aa3a5f9c110dee82b81c00f72e0:-1899342052,ae457223cbf9c1100d8627252543b19b:-2122667388,da35f6ef16b9c11030c875cfb3ec99fc:88252109,a435b6a39bf9c11007903a7244422238:-936131320,b91536ef6bb9c11024fe71b13ff4f325:-278679056,8b63b6af2fb9c110e363e5633afea08d:-74895869,4af272afafb9c1106a499555c1dbe00f:-55381145,1cd272afc3b9c1106d287c5df1990016:-1802008936,f4d1fa6be6b9c110869a349675366176:374396313,f2813e6becb9c110fb3e5e5db5bb77f1:1120283065,3b60366bbbb9c11025cd53483e4ed103:-1196829143,3b50722bb8b9c1109417dd307dcfc1b3:926097901,ad30766b83b9c1100bfd93e86651930d:1481182693,a620ba2bc2b9c1102cf5108b0b9ec9d3:-457145890,3a00ba2bc3b9c1100f369c74aa67f6dc:-2064049599,dedf6a2b13b9c110e9669f2f84f5efae:436384976,0abf662bdeb9c1103816d53a754266fd:-1196829143,68ce6aa72fb9c1102ddb796fef6f8215:1320703161,b90e6a2fe179c110bc50c026ebca1354:-522546557,e9bdea27ccb9c110856b555a57b1bd11:-2117341197,e6eaaaefdc79c110fffa3e9433513181:-1708794917</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 09:06:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_macro">sys_ui_macro</sys_db_object>
+        <sys_id>07a395d01a8d460082cb7c0cfa98ca64</sys_id>
+        <sys_metadata>11da2aefdb79c110883c68d35b96193f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Story Comments Macro</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_scope_delete display_value="">68dc0efb280a437c81d130bbafd01b10</sys_scope_delete>
+        <sys_update_name>sys_ui_macro_11da2aefdb79c110883c68d35b96193f</sys_update_name>
+        <sys_update_version display_value="sys_ui_macro_11da2aefdb79c110883c68d35b96193f">9868fee7dbf9c110883c68d35b9619f1</sys_update_version>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 09:06:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

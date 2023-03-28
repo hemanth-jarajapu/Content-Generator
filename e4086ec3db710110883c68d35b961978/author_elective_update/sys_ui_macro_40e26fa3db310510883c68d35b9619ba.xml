@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>StoryCommentsSubMacro</name>
+        <scoped_name>x_350851_content_0_Story Comments SubMacro</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 09:03:33</sys_created_on>
+        <sys_id>40e26fa3db310510883c68d35b9619ba</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>StoryCommentsSubMacro</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_ui_macro_40e26fa3db310510883c68d35b9619ba</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 09:04:20</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<body>
+		<div id="buttonContainer">
+			<input type="button" id="generateButton" onclick="generateComments()" value="Generate Content"/>
+		</div>
+	</body>
+	
+	<style>
+		#buttonContainer {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		#generateButton {
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			margin-right: 50px;
+			background-color: rgba(255, 255, 255, 0.45);
+			border: 1px solid #cbcbcb;
+			color: #2e2e2e;
+			line-height: 1.42857;
+			min-width: 10em;
+			min-width: auto\9;
+			min-height: 2.25em;
+			min-height: auto\9;
+			font-weight: normal;
+			padding: 6px 9px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 18px;
+		}
+		
+		#generateButton:hover {
+			background-color: #e7e9eb;
+		}
+		
+		.navbar-default {
+			display: none
+		}
+		
+		.form_action_button_container {
+			display: none
+		}
+	</style>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Content Generator">e4086ec3db710110883c68d35b961978</application>
+        <file_path/>
+        <instance_id>a638dbdfdb0e770c91232f17d496191f</instance_id>
+        <instance_name>dev88383</instance_name>
+        <name>sys_ui_macro_40e26fa3db310510883c68d35b9619ba</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;StoryCommentsSubMacro&lt;/name&gt;&lt;scoped_name&gt;x_350851_content_0_Story Comments SubMacro&lt;/scoped_name&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;hemanth.jarajapu&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-02-27 09:03:33&lt;/sys_created_on&gt;&lt;sys_id&gt;40e26fa3db310510883c68d35b9619ba&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;StoryCommentsSubMacro&lt;/sys_name&gt;&lt;sys_package display_value="Content Generator" source="x_350851_content_0"&gt;e4086ec3db710110883c68d35b961978&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Content Generator"&gt;e4086ec3db710110883c68d35b961978&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_40e26fa3db310510883c68d35b9619ba&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;hemanth.jarajapu&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-02-27 09:04:20&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+	&lt;body&gt;
+		&lt;div id="buttonContainer"&gt;
+			&lt;input type="button" id="generateButton" onclick="generateComments()" value="Generate Content"/&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+	
+	&lt;style&gt;
+		#buttonContainer {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		#generateButton {
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			margin-right: 50px;
+			background-color: rgba(255, 255, 255, 0.45);
+			border: 1px solid #cbcbcb;
+			color: #2e2e2e;
+			line-height: 1.42857;
+			min-width: 10em;
+			min-width: auto\9;
+			min-height: 2.25em;
+			min-height: auto\9;
+			font-weight: normal;
+			padding: 6px 9px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 18px;
+		}
+		
+		#generateButton:hover {
+			background-color: #e7e9eb;
+		}
+		
+		.navbar-default {
+			display: none
+		}
+		
+		.form_action_button_container {
+			display: none
+		}
+	&lt;/style&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-377818560</payload_hash>
+        <record_name>StoryCommentsSubMacro</record_name>
+        <reverted_from/>
+        <source>f688ee07db710110883c68d35b961921</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 09:04:20</sys_created_on>
+        <sys_id>f0336fa3db310510883c68d35b961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f3a6c74470000001</sys_recorded_at>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 09:04:20</sys_updated_on>
+        <type>Macro</type>
+        <update_guid>38336fa3f031051033ca013f71d5e160</update_guid>
+        <update_guid_history>38336fa3f031051033ca013f71d5e160:-377818560,1d0367e3c33105100894e8af231d286e:-1569585584</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 09:05:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_macro">sys_ui_macro</sys_db_object>
+        <sys_id>136300ea2d2642ea9c53119a8e5b1049</sys_id>
+        <sys_metadata>40e26fa3db310510883c68d35b9619ba</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>StoryCommentsSubMacro</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_scope_delete display_value="">68dc0efb280a437c81d130bbafd01b10</sys_scope_delete>
+        <sys_update_name>sys_ui_macro_40e26fa3db310510883c68d35b9619ba</sys_update_name>
+        <sys_update_version display_value="sys_ui_macro_40e26fa3db310510883c68d35b9619ba">f0336fa3db310510883c68d35b961961</sys_update_version>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 09:05:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

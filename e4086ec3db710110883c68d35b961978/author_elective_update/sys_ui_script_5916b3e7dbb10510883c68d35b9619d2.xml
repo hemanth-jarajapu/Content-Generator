@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="DELETE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_350851_content_0.StoryCommentsUIutils</name>
+        <script><![CDATA[var x_350851_content_0 = x_350851_content_0 || {};
+
+x_350851_content_0.StoryCommentsUIutils = (function() {
+	"use strict";
+
+// set your private variables and functions here. For example: 
+	var privateVar = 0; 
+	function private_function() {
+		return "1234";
+	}
+
+
+/* Share variables between multiple UI scripts by adding them to your scope object. For example: 
+	x_350851_content_0.sharedVar = 0; 
+
+ Then access them in your scripts the same way. For example: 
+	function get_shared() {
+		return x_350851_content_0.sharedVar;
+	}
+*/
+
+	return {
+
+// set your public API here. For example:
+		incrementAndReturnPrivateVar: function() {
+			return private_function();
+		},
+		type:  "StoryCommentsUIutils"
+	};
+})();
+]]></script>
+        <script_name>StoryCommentsUIutils</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 10:27:41</sys_created_on>
+        <sys_id>5916b3e7dbb10510883c68d35b9619d2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_350851_content_0.StoryCommentsUIutils</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_ui_script_5916b3e7dbb10510883c68d35b9619d2</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 10:29:16</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>true</use_scoped_format>
+    </sys_ui_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Content Generator">e4086ec3db710110883c68d35b961978</application>
+        <file_path/>
+        <instance_id>a638dbdfdb0e770c91232f17d496191f</instance_id>
+        <instance_name>dev88383</instance_name>
+        <name>sys_ui_script_5916b3e7dbb10510883c68d35b9619d2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;description/&gt;&lt;global&gt;false&lt;/global&gt;&lt;name&gt;x_350851_content_0.StoryCommentsUIutils&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var x_350851_content_0 = x_350851_content_0 || {};
+
+x_350851_content_0.StoryCommentsUIutils = (function() {
+	"use strict";
+
+// set your private variables and functions here. For example: 
+	var privateVar = 0; 
+	function private_function() {
+		return "1234";
+	}
+
+
+/* Share variables between multiple UI scripts by adding them to your scope object. For example: 
+	x_350851_content_0.sharedVar = 0; 
+
+ Then access them in your scripts the same way. For example: 
+	function get_shared() {
+		return x_350851_content_0.sharedVar;
+	}
+*/
+
+	return {
+
+// set your public API here. For example:
+		incrementAndReturnPrivateVar: function() {
+			return private_function();
+		},
+		type:  "StoryCommentsUIutils"
+	};
+})();
+]]&gt;&lt;/script&gt;&lt;script_name&gt;StoryCommentsUIutils&lt;/script_name&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;hemanth.jarajapu&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-02-27 10:27:41&lt;/sys_created_on&gt;&lt;sys_id&gt;5916b3e7dbb10510883c68d35b9619d2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_350851_content_0.StoryCommentsUIutils&lt;/sys_name&gt;&lt;sys_package display_value="Content Generator" source="x_350851_content_0"&gt;e4086ec3db710110883c68d35b961978&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Content Generator"&gt;e4086ec3db710110883c68d35b961978&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_5916b3e7dbb10510883c68d35b9619d2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;hemanth.jarajapu&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-02-27 10:29:16&lt;/sys_updated_on&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;use_scoped_format&gt;true&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1964193051</payload_hash>
+        <record_name>x_350851_content_0.StoryCommentsUIutils</record_name>
+        <reverted_from/>
+        <source>f688ee07db710110883c68d35b961921</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 10:29:16</sys_created_on>
+        <sys_id>b0a6ffe7dbb10510883c68d35b9619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17f3aba363f0000001</sys_recorded_at>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 10:29:16</sys_updated_on>
+        <type>UI Script</type>
+        <update_guid>78a6ffe74db1051083950fc17c61e0d9</update_guid>
+        <update_guid_history>78a6ffe74db1051083950fc17c61e0d9:-1964193051,fd463be720b105102c28e0acc1afa634:-887534677</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>hemanth.jarajapu</sys_created_by>
+        <sys_created_on>2022-02-27 10:30:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_script">sys_ui_script</sys_db_object>
+        <sys_id>fa72f87ea5424450a721523b91794251</sys_id>
+        <sys_metadata>5916b3e7dbb10510883c68d35b9619d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_350851_content_0.StoryCommentsUIutils</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_scope_delete display_value="">68dc0efb280a437c81d130bbafd01b10</sys_scope_delete>
+        <sys_update_name>sys_ui_script_5916b3e7dbb10510883c68d35b9619d2</sys_update_name>
+        <sys_update_version display_value="sys_ui_script_5916b3e7dbb10510883c68d35b9619d2">b0a6ffe7dbb10510883c68d35b9619da</sys_update_version>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 10:30:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

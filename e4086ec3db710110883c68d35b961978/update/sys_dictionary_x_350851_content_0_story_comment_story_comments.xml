@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="INSERT_OR_UPDATE" element="story_comments" table="x_350851_content_0_story_comment">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Story Comments</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value>&lt;div id="contentBody"&gt;&#13;
+    &lt;table&gt;&#13;
+        &lt;tr class="developmentStuff"&gt;&#13;
+            &lt;th id="developmentHead"&gt;&#13;
+                Development&#13;
+            &lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr class="developmentStuff"&gt;&#13;
+            &lt;th&gt;&#13;
+                Application Files&#13;
+            &lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr class="developmentStuff"&gt;&#13;
+            &lt;td&gt;&#13;
+                &lt;a href="link" target="_blank"&gt;NameNameNameNameNameNameNameNameNameNameNameName&lt;/a&gt;:&#13;
+                &amp;nbsp;&amp;nbsp;&amp;nbsp;These changes are done here&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr class="developmentStuff"&gt;&#13;
+            &lt;td&gt;&#13;
+                &lt;a href="link" target="_blank"&gt;Name&lt;/a&gt;: &amp;nbsp;&amp;nbsp;&amp;nbsp;This is newly created for this story&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;&#13;
+                Update Set&#13;
+            &lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td id="updateSetContent"&gt;&#13;
+                &lt;a href="link" target="_blank"&gt;Name&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;&#13;
+                Changes To Be Pushed&#13;
+            &lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td id="changesLink"&gt;&#13;
+                &lt;a href="link" target="_blank"&gt;X Changes&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr class="testStuff"&gt;&#13;
+            &lt;th id="testHead"&gt;&#13;
+                Testing&#13;
+            &lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr class="testStuff"&gt;&#13;
+            &lt;td&gt;&#13;
+                &lt;ul id="testSteps"&gt;&#13;
+                    &lt;li&gt;Step 1&lt;/li&gt;&#13;
+                    &lt;li&gt;Step 2&lt;/li&gt;&#13;
+                &lt;/ul&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+    &lt;/table&gt;&#13;
+    &lt;footer id="footerParent"&gt;&#13;
+        &lt;hr&gt;&#13;
+        &lt;p id="footerContent"&gt;&#13;
+            No Application files were harmed during the development process of this story. Any changes that are there in&#13;
+            the update set but not in the changes to be pushed might have been done for&#13;
+            testing purposes and reverted. If you still feel there's something wrong with them, please contact me.&#13;
+        &lt;/p&gt;&#13;
+    &lt;/footer&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;style&gt;&#13;
+    #contentBody {&#13;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;&#13;
+    }&#13;
+&#13;
+    table {&#13;
+        padding: 10px 0px 0px 7px;&#13;
+    }&#13;
+&#13;
+    table,&#13;
+    th,&#13;
+    td {&#13;
+        text-align: start;&#13;
+    }&#13;
+&#13;
+    th,&#13;
+    td {&#13;
+        min-width: 200px;&#13;
+        padding-left: 10px;&#13;
+    }&#13;
+&#13;
+    th {&#13;
+        font-size: medium;&#13;
+        padding-top: 5px;&#13;
+    }&#13;
+&#13;
+    td {&#13;
+        font-size: small;&#13;
+        padding-left: 15px;&#13;
+        padding-top: 5px;&#13;
+    }&#13;
+&#13;
+    .developmentStuff {&#13;
+        display: block;&#13;
+    }&#13;
+&#13;
+    #developmentHead {&#13;
+        font-size: x-large;&#13;
+        padding: 0px 0px 10px 0px;&#13;
+    }&#13;
+&#13;
+    .testStuff {&#13;
+        display: block;&#13;
+    }&#13;
+&#13;
+    #testHead {&#13;
+        font-size: x-large;&#13;
+        padding: 20px 0px 0px 0px;&#13;
+    }&#13;
+&#13;
+    #testSteps {&#13;
+        font-size: small;&#13;
+    }&#13;
+&#13;
+    #footerParent {&#13;
+        padding: 15px 10px 0px 10px;&#13;
+    }&#13;
+&#13;
+    #footerContent {&#13;
+        padding: 0px 10px 0px 10px;&#13;
+        font-size: 9px;&#13;
+    }&#13;
+&lt;/style&gt;</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>story_comments</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="HTML">html</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <name>x_350851_content_0_story_comment</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-27 04:51:01</sys_created_on>
+        <sys_name>Story Comments</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_dictionary_x_350851_content_0_story_comment_story_comments</sys_update_name>
+        <sys_updated_by>hemanth.jarajapu</sys_updated_by>
+        <sys_updated_on>2022-02-27 09:25:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+</record_update>
