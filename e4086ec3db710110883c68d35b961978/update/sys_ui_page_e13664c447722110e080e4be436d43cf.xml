@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var tableElem = gel("table");
+var applicationElem = gel("application");
+var subflowElem = gel("subflow");
+var actionElem = gel("action");
+var activeElem = gel("active");
+
+subflowElem.addEventListener("keypress", function (ev) {
+	if (ev.key === "Enter") {
+		searchForflows();
+	}
+});
+
+actionElem.addEventListener("keypress", function (ev) {
+	if (ev.key === "Enter") {
+		searchForflows();
+	}
+});
+
+function searchForflows() {
+	gel("search_results").innerHTML = "";
+	gel("export_button").style.display = "none";
+	var table = tableElem.value;
+	var application = applicationElem.value;
+	var subflow = subflowElem.value;
+	var action = actionElem.value;
+	var active = activeElem.value;
+	if (!table && !application && !subflow && !action) {
+		alert("Please Fill any of the search inputs.");
+		return false;
+	}
+
+	gel("results_loading").style.display = "block";
+	var flowSearchUtils = new GlideAjax("x_350851_content_0.FlowSearchUtils");
+	flowSearchUtils.addParam("sysparm_name", "findFlows");
+	flowSearchUtils.addParam("sysparm_table", table);
+	flowSearchUtils.addParam("sysparm_application", application);
+	flowSearchUtils.addParam("sysparm_subflow", subflow);
+	flowSearchUtils.addParam("sysparm_action", action);
+	flowSearchUtils.addParam("sysparm_active", active);
+	flowSearchUtils.getXMLAnswer(function (results) {
+		gel("results_loading").style.display = "none";
+		if (results) {
+			try {
+				sessionStorage.setItem("flow_search_ui_results_json", results);
+			}
+			catch (err) { }
+			results = JSON.parse(results);
+			var flowDataHTML = '<table id="flow_search_results" class="list_table table table-hover table-striped"><tr class="flow_data"><th>Name</th><th>Active</th><th>Type</th><th>Application</th><th>Internal Name</th></tr>';
+			for (var f = 0; f < results.length; f++) {
+				flowDataHTML += '<tr class="flow_data"><td><a role="button" id="' + results[f].sys_id + '" href="sys_hub_flow.do?sys_id=' + results[f].sys_id + '" class="glide_ref_item_link" tabindex="0" target="_blank">' + results[f].name + '</a></td><td>' + results[f].active + '</td><td>' + results[f].type + '</td><td>' + results[f].scope + '</td><td>' + results[f].internal_name + '</td></tr>';
+			}
+			flowDataHTML += "</table>";
+			gel("search_results").innerHTML = flowDataHTML;
+			gel("export_button").style.display = "block";
+		} else {
+			gel("search_results").innerHTML = "No flows found!";
+		}
+	});
+}
+
+function toggleFilterUI() {
+	if (gel("filter_ui").style.display == "none") {
+		gel("filter_ui").style.display = "block";
+		//gel("spacer_div").style.display = "none";
+	} else {
+		gel("filter_ui").style.display = "none";
+		//gel("spacer_div").style.display = "block";
+	}
+}
+
+function toggleExportDropdown() {
+	document.getElementById("export_dropdown").classList.toggle("show");
+}
+
+function exportDataToExcel() {
+	var downloadLink;
+	var dataType = 'application/vnd.ms-excel';
+	var tableHTML = encodeURIComponent(gel("search_results").innerHTML);
+	if (!tableHTML) {
+		alert("Failed to export data!");
+		return false;
+	}
+
+	var filename = 'flow_search_results';
+	downloadLink = document.createElement("a");
+	if (navigator.msSaveOrOpenBlob) {
+		var blob = new Blob(['\ufeff', tableHTML], {
+			type: dataType
+		});
+		navigator.msSaveOrOpenBlob(blob, filename);
+	} else {
+		// Create a link to the file
+		downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+		// Set the file name
+		downloadLink.download = filename;
+		//trigger download
+		downloadLink.click();
+	}
+}
+
+function exportDataToJSON() {
+	if (sessionStorage.flow_search_ui_results_json) {
+		var data = sessionStorage.getItem("flow_search_ui_results_json");
+	} else {
+		alert("Failed to export data!");
+		return false;
+	}
+
+	var downloadLink;
+	var dataType = 'text/plain';
+	var filename = 'flow_search_results.json';
+	downloadLink = document.createElement("a");
+	downloadLink.href = 'data:' + dataType + ', ' + data;
+	downloadLink.download = filename;
+	downloadLink.click();
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_350851_content_0_flow_search_page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<div id="flow_search_header">
+		<div id="header_left_group">
+			<h3 id="menu_icon" class="icon icon-menu" onclick="toggleFilterUI()"></h3>
+			<h3 id="ui_title">Flow Finder</h3>
+		</div>
+		<div id="header_right_group">
+			<div class="dropdown">
+				<button id="export_button" class="btn btn-primary dropdown-button" onclick="toggleExportDropdown()">
+					Export <span id="menu_icon" class="icon icon-chevron-down"></span>
+				</button>
+				<div id="export_dropdown" class="dropdown-content">
+					<input type="button" id="export_xls" onclick="exportDataToExcel()"
+						class="btn btn-primary dropdown-item" value="Excel" />
+					<input type="button" id="export_json" onclick="exportDataToJSON()"
+						class="btn btn-primary dropdown-item" value="JSON" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="flow_search_ui">
+		<g:ui_form>
+			<div id="filter_ui">
+				<div class="modal-body" id="modal_body">
+					<div id="search_inputs">
+						<span id="filter_icon" class="icon icon-filter"></span>
+						<p></p>
+						<h3 class="filter_header">Properties:</h3>
+						<div class="row">
+							<span class="col-xs-12 col-md-3 col-lg-4 control-label" data-html="false">Application</span>
+							<g:ui_reference class="form-field input_controls form-control" name="application"
+								id="application" table="sys_scope" completer="AJAXTableCompleter" columns="scope" />
+							<span class="col-xs-12 col-md-3 col-lg-2 control-label"
+								data-html="false">Active/Inactive</span>
+							<select name="active" id="active" class="form-control">
+								<option value="">Both</option>
+								<option value="active">Active</option>
+								<option value="inactive">Inactive</option>
+							</select>
+						</div>
+						<h3 class="filter_header">Uses:</h3>
+						<div class="row">
+							<span class="col-xs-12 col-md-3 col-lg-4 control-label" data-html="false">Table</span>
+							<g:ui_reference class="form-field input_controls form-control" name="table" id="table"
+								table="sys_db_object" completer="AJAXTableCompleter" columns="name" />
+							<div class="sn-tooltip-basic" title="Input and click Enter" data-toggle="tooltip"
+								data-placement="auto">
+								<span class="col-xs-12 col-md-3 col-lg-4 control-label" data-html="false">Subflow</span>
+								<input type="text" id="subflow" name="subflow" class="form-control" />
+							</div>
+							<div class="sn-tooltip-basic" title="Input and click Enter" data-toggle="tooltip"
+								data-placement="auto">
+								<span class="col-xs-12 col-md-3 col-lg-4 control-label" data-html="false">Action</span>
+								<input type="text" id="action" name="action" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-buttons">
+					<input type="button" id="search_flows" value="Search" onclick="searchForflows()"
+						class="btn btn-primary" />
+				</div>
+			</div>
+		</g:ui_form>
+		<div id="spacer_div"></div>
+		<div id="results_ui">
+			<span id="results_loading" class="icon icon-loading"></span>
+			<span id="test"></span>
+			<div id="search_results"></div>
+		</div>
+	</div>
+
+	<style>
+		#flow_search_header {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border: 1px solid grey;
+			margin-bottom: 5px;
+			box-shadow: 0px 3px 20px 1px gray;
+		}
+
+		#flow_search_header #header_left_group {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		#flow_search_header #menu_icon {
+			margin: 5px;
+			cursor: pointer;
+		}
+
+		#flow_search_header #ui_title {
+			margin: 5px;
+		}
+
+		#flow_search_header #export_button {
+			display: none;
+		}
+
+		#flow_search_header .dropdown-content {
+			display: none;
+			position: absolute;
+			overflow: auto;
+			z-index: 1;
+		}
+
+		#flow_search_header .dropdown-item {
+			text-decoration: none;
+			display: block;
+			margin-top: 5px;
+			margin-left: 8px;
+			min-width: 80px;
+		}
+
+		#flow_search_header .show {
+			display: block;
+		}
+
+		#flow_search_ui {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-start;
+			height: 100vh;
+		}
+
+		#flow_search_ui #filter_ui {
+			height: fit-content;
+			width: 30vw;
+			margin-top: 5px;
+			background-color: #9ba2b0;
+			border-radius: 10px;
+		}
+
+		#flow_search_ui .filter_header {
+			margin-top: 25px;
+			font-weight: bold
+		}
+
+		#flow_search_ui #filter_ui h3{
+			color: black;
+		}
+
+		#flow_search_ui #filter_ui .control-label{
+			color: black;
+		}
+
+		#flow_search_ui #results_ui {
+			height: 90vh;
+			font-size: medium;
+		}
+
+		#flow_search_ui #filter_icon {
+			color: #434956;
+		}
+
+		#flow_search_ui .grouped_inputs {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-end;
+		}
+
+		#flow_search_ui #search_inputs .control-label {
+			font-size: larger;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+
+		#flow_search_ui #search_inputs .form-control {
+			margin: 5px;
+			width: 90%;
+		}
+
+		#flow_search_ui #results_loading {
+			position: absolute;
+			left: 50%;
+			display: none;
+		}
+
+		#flow_search_ui #search_results {
+			margin-top: 10px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: flex-start;
+			align-items: flex-start;
+			height: 90vh;
+			overflow-y: scroll;
+			scrollbar-width: none;
+		}
+
+		#flow_search_ui #search_results::-webkit-scrollbar {
+			display: none;
+			/* for Chrome, Safari, and Opera */
+		}
+
+		#flow_search_ui .modal-buttons {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			align-content: stretch;
+			align-items: flex-end;
+		}
+
+		#flow_search_ui #search_flows {
+			margin-right: 20px;
+			margin-bottom: 20px;
+			width: 90px;
+			height: 40px;
+			font-size: medium;
+		}
+
+		#flow_search_ui #spacer_div {
+			height: 50vh;
+			width: 5vw;
+			display: none;
+		}
+	</style>
+
+</j:jelly>]]></html>
+        <name>flow_search_page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-09 07:45:46</sys_created_on>
+        <sys_id>e13664c447722110e080e4be436d43cf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>flow_search_page</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_ui_page_e13664c447722110e080e4be436d43cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-09 07:47:14</sys_updated_on>
+    </sys_ui_page>
+</record_update>
