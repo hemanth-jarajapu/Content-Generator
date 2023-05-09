@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_350851_content_0.FlowSearchUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>FlowSearchUtils</name>
+        <script><![CDATA[var FlowSearchUtils = Class.create();
+FlowSearchUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	findFlows: function (table, application, subflow, action, active) {
+		table = table ? table : this.getParameter("sysparm_table");
+		application = application ? application : this.getParameter("sysparm_application");
+		subflow = subflow ? subflow : this.getParameter("sysparm_subflow");
+		action = action ? action : this.getParameter("sysparm_action");
+		active = active ? active : this.getParameter("sysparm_active");
+
+		if (!table && !application && !subflow && !action) {
+			return "";
+		}
+
+		var flows = new GlideRecord("sys_hub_flow");
+		flows.addQuery("label_cacheISNOTEMPTY");
+
+		if (table) {
+			var tableGR = new GlideRecord("sys_db_object");
+			if (tableGR.get(table)) {
+				flows.addQuery('^label_cacheLIKE"reference":"' + tableGR.getValue("name") + '"');
+			}
+		}
+		if (application) {
+			flows.addQuery("sys_scope", application);
+		}
+		if (subflow) {
+			flows.addQuery("label_cacheLIKE" + subflow);
+		}
+		if (action) {
+			flows.addQuery("label_cacheLIKE" + action);
+		}
+		if (active) {
+			if(active=="active"){
+				flows.addQuery("active", true);
+			}else if(active == "inactive"){
+				flows.addQuery("active", false);
+			}
+		}
+
+		flows.orderBy("name");
+		flows.query();
+		gs.info("\n\n" + flows.getEncodedQuery());
+		if (!flows.hasNext()) {
+			return "";
+		}
+
+		var flowData = [];
+		while (flows.next()) {
+			var eachFlowData = {};
+			eachFlowData.name = flows.getValue("name");
+			eachFlowData.internal_name = flows.getValue("internal_name");
+			eachFlowData.active = flows.active.toString();
+			eachFlowData.type = flows.type.getDisplayValue();
+			eachFlowData.scope = flows.sys_scope.getDisplayValue();
+			eachFlowData.sys_id = flows.getUniqueValue();
+			flowData.push(eachFlowData);
+		}
+
+		return JSON.stringify(flowData);
+	},
+
+	type: 'FlowSearchUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-09 07:46:26</sys_created_on>
+        <sys_id>e476acc447722110e080e4be436d4360</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FlowSearchUtils</sys_name>
+        <sys_package display_value="Content Generator" source="x_350851_content_0">e4086ec3db710110883c68d35b961978</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Content Generator">e4086ec3db710110883c68d35b961978</sys_scope>
+        <sys_update_name>sys_script_include_e476acc447722110e080e4be436d4360</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-09 07:46:38</sys_updated_on>
+    </sys_script_include>
+</record_update>
